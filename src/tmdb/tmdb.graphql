@@ -1,0 +1,26 @@
+type TMDBTalent {
+  tmdbID: ID!
+  name: String!
+  thumbnail: String
+  birthday: String
+  biography: String
+  place_of_birth: String
+  known_for_department: String
+  twitter: String
+  facebook: String
+  instagram: String
+}
+
+type TMDBCredits {
+  id: ID!
+  title: String!
+  character: String!
+  release_date: String!
+  thumbnail: String
+}
+
+type Query {
+  TMDBSearchTalent(name: String!): [TMDBTalent!]
+  TMDBTalentByID(tmdbID: ID!): TMDBTalent!
+  TMDBCreditsByID(tmdbID: ID!): [TMDBCredits!]
+}

@@ -1,0 +1,8 @@
+type Twitter {
+  username: String!
+  followerCount: Int
+}
+
+type Query {
+  TwitterByUsername(username: String!): Twitter!
+}
